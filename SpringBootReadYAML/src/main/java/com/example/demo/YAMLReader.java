@@ -1,0 +1,22 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class YAMLReader implements CommandLineRunner {
+
+    @Autowired
+    private LDAPConfiguration ldapConfiguration;
+
+    public static void main(String[] args) {
+        SpringApplication.run(YAMLReader.class, args);
+    }
+
+    @Override
+    public void run(String... args) {
+        System.out.println(ldapConfiguration);
+    }
+}

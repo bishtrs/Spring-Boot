@@ -1,0 +1,12 @@
+ldap:
+  url: ldap://ldap.example.com:389/
+  protocol: ssl
+  bindDN: region1\\john.doe@example.coml
+  baseFilters:
+   - =CN={0}
+   - =uid={0}
+  servers:
+    - ip: 127.0.0.1
+      port: 8001
+    - ip: 127.0.0.2
+      port: 8002
